@@ -21,10 +21,10 @@ struct ListaLugaresView: View {
             List {
                 ForEach(lugares, id: \.self){ local in
                     NavigationLink(
-                        destination: LugarView(),
+                        destination: LugarView(nome: local),
                         label: {
                             HStack {
-                                Image("foto 3")
+                                Image(local)
                                     .resizable()
                                     .frame(width: 50, height: 50)
                                 Text(local)

@@ -3,6 +3,7 @@ import SwiftUI
 struct LugarView: View {
     
     @State private var isFavorited = false
+    var nome: String
     
     var body: some View{
         VStack{
@@ -13,7 +14,7 @@ struct LugarView: View {
                 Image("foto")
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
-                Image("foto 2")
+                Image(nome)
                     .frame(maxWidth: 250, maxHeight: 250)
                     .clipShape(Circle())
                     .overlay {
@@ -63,5 +64,5 @@ struct LugarView: View {
 }
 
 #Preview {
-    LugarView()
+    LugarView(nome: "Ponta Negra")
 }
