@@ -19,25 +19,35 @@ struct ListaLugaresView2: View {
     @State var numberOfVisits = 0
     
     var body: some View {
-        VStack{
-            List {
-                ForEach(lugares, id: \.self){ local in
-                    HStack {
-                        Image(local)
-                            .resizable()
-                            .frame(width: 50, height: 50)
-                        Text(local)
-                            .multilineTextAlignment(.leading)
-                            .frame(alignment: .leading)
+        NavigationStack {
+            
+            VStack{
+                List {
+                    ForEach(lugares, id: \.self){ local in
+                        NavigationLink {
+                            LugarView2(numberOfVisits: $numberOfVisits, nome: local)
+                        } label: {
+                            HStack {
+                                Image(local)
+                                    .resizable()
+                                    .frame(width: 50, height: 50)
+                                Text(local)
+                                    .multilineTextAlignment(.leading)
+                                    .frame(alignment: .leading)
+                            }
+                        }
+
+                        
+                        
                     }
                     
                 }
-                
+                Text("Número de Visitas: \(numberOfVisits)")
+                    .font(.largeTitle)
+                    .bold()
             }
-            Text("Número de Visitas: \(numberOfVisits)")
-                .font(.largeTitle)
-                .bold()
         }
+        
     }
 }
 
