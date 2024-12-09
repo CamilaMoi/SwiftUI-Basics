@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListaLugaresView: View {
+struct ListaLugaresView2: View {
     
     let lugares: [String] = [
         "Igarapé do 40",
@@ -37,5 +37,5 @@ struct ListaLugaresView: View {
 
 
 #Preview {
-    ListaLugaresView()
+    ListaLugaresView2()
 }
