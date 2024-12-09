@@ -17,24 +17,19 @@ struct ListaLugaresView: View {
     ]
     
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(lugares, id: \.self){ local in
-                    NavigationLink(
-                        destination: LugarView(nome: local),
-                        label: {
-                            HStack {
-                                Image(local)
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                Text(local)
-                                    .multilineTextAlignment(.leading)
-                                    .frame(alignment: .leading)
-                            }
-                        })
-                    }
+        List {
+            ForEach(lugares, id: \.self){ local in
+                HStack {
+                    Image(local)
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                    Text(local)
+                        .multilineTextAlignment(.leading)
+                        .frame(alignment: .leading)
+                }
+                
             }
-            .navigationTitle("Lugares")
+            
         }
     }
 }
