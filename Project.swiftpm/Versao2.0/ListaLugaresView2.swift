@@ -16,20 +16,27 @@ struct ListaLugaresView2: View {
         "Encontro das Águas"
     ]
     
+    @State var numberOfVisits = 0
+    
     var body: some View {
-        List {
-            ForEach(lugares, id: \.self){ local in
-                HStack {
-                    Image(local)
-                        .resizable()
-                        .frame(width: 50, height: 50)
-                    Text(local)
-                        .multilineTextAlignment(.leading)
-                        .frame(alignment: .leading)
+        VStack{
+            List {
+                ForEach(lugares, id: \.self){ local in
+                    HStack {
+                        Image(local)
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                        Text(local)
+                            .multilineTextAlignment(.leading)
+                            .frame(alignment: .leading)
+                    }
+                    
                 }
                 
             }
-            
+            Text("Número de Visitas: \(numberOfVisits)")
+                .font(.largeTitle)
+                .bold()
         }
     }
 }
