@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LugarViewV2: View {
+struct LugarView2: View {
     
     @State private var isFavorited = false
     @Binding var numberOfVisits: Int

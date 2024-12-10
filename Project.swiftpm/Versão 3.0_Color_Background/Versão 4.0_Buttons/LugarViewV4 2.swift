@@ -1,23 +1,22 @@
 import SwiftUI
 
-struct LugarViewV2: View {
+struct LugarViewV4: View {
     
+//    1º
     @State private var isFavorited = false
-    @Binding var numberOfVisits: Int
-    var nome: String
     
     var body: some View{
         VStack{
+            
             ScrollView{
                 
-                Color("primary") //.ignoresSafeArea()
-                
+                Color("primary").ignoresSafeArea()
                 
                 Image("foto")
 //                    .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
-                Image(nome)
+                Image("Igarapé do 40")
                     .frame(maxWidth: 250, maxHeight: 250)
                     .clipShape(Circle())
                     .overlay {
@@ -30,11 +29,11 @@ struct LugarViewV2: View {
                     HStack {
                         Text("Igarapé do Quarenta")
                             .foregroundStyle(Color("secondary"))
-                        
                             .font(.largeTitle)
-                            
+                        
                         Spacer()
                         
+//                        2º
                         Button(action: {
                             isFavorited.toggle()
                         }) {
@@ -48,6 +47,7 @@ struct LugarViewV2: View {
                         Text("Ponto histórico de Manaus")
                         Spacer()
                         Text("Amazonas")
+                        
                     }
                     .foregroundStyle(.gray)
                     .font(.subheadline)
@@ -65,23 +65,15 @@ struct LugarViewV2: View {
                     Text("  Apesar das dificuldades, o Igarapé do 40 carrega grande significado cultural e social para Manaus. Ele é um exemplo da relação íntima que os moradores da cidade têm com os rios e igarapés, que são parte integrante da identidade amazônica. Sua recuperação é uma meta importante para tornar Manaus uma cidade mais sustentável e resiliente.")
                         .font(.body)
                     
-                    Button {
-                    } label: {
-                        CustomButton(buttonText: "Visitei hoje")
-
-                    }
-
-                    
                 }.padding()
             }
             .ignoresSafeArea()
         }
-//        .ignoresSafeArea()
     }
 }
 
 
-//
-//#Preview {
-//    LugarView(nome: "Ponta Negra")
-//}
+
+#Preview {
+    LugarViewV4()
+}
