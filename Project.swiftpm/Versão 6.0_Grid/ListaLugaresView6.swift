@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListaLugaresView2_0: View {
+struct ListaLugaresView6: View {
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -18,16 +18,14 @@ struct ListaLugaresView2_0: View {
         "Encontro das Águas"
     ]
     
-    @State var numberOfVisits = 0
-    
     var body: some View {
         NavigationStack { 
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 16) {
                     ForEach(lugares, id: \.self) { local in
-                        NavigationLink {
-                            LugarView2_0(numberOfVisits: $numberOfVisits, nome: local)
-                        } label: {
+//                        NavigationLink {
+//                            LugarView2(numberOfVisits: $numberOfVisits, nome: local)
+//                        } label: {
                             VStack {
                                 Image(local)
                                     .resizable()
@@ -46,13 +44,10 @@ struct ListaLugaresView2_0: View {
                             .background(Color(.gray).opacity(0.1))
                             .cornerRadius(20)
                             .shadow(color: .gray.opacity(0.3), radius: 4, x: 0, y: 2)
-                        }
+//                        }
                     }
                 }
                 .padding()
-                Text("Número de Visitas: \(numberOfVisits)")
-                    .font(.largeTitle)
-                    .bold()
             }
             .navigationTitle("Lugares") // Define o título da navegação
         }
@@ -60,5 +55,5 @@ struct ListaLugaresView2_0: View {
 }
 
 #Preview {
-    ListaLugaresView2_0()
+    ListaLugaresView6()
 }

@@ -21,38 +21,37 @@ struct ListaLugaresView2_1: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-            
-            VStack{
-                List {
-                    ForEach(lugares, id: \.self){ local in
-                        NavigationLink {
-                            LugarView2_1(numberOfVisits: $numberOfVisits, nome: local)
-                        } label: {
-                            HStack {
-                                Image(local)
-                                    .resizable()
-                                    .frame(width: 50, height: 50)
-                                Text(local)
-                                    .multilineTextAlignment(.leading)
-                                    .frame(alignment: .leading)
+                
+                VStack{
+                    List {
+                        ForEach(lugares, id: \.self){ local in
+                            NavigationLink {
+                                LugarView2_1(numberOfVisits: $numberOfVisits, nome: local)
+                            } label: {
+                                HStack {
+                                    Image(local)
+                                        .resizable()
+                                        .frame(width: 50, height: 50)
+                                    Text(local)
+                                        .multilineTextAlignment(.leading)
+                                        .frame(alignment: .leading)
+                                }
                             }
+                            
+                            
+                            
                         }
-
-                        
                         
                     }
-                    
+                    Text("Número de Visitas: \(numberOfVisits)")
+                        .font(.largeTitle)
+                        .bold()
                 }
-                Text("Número de Visitas: \(numberOfVisits)")
-                    .font(.largeTitle)
-                    .bold()
->>>>>>> a91105866e709c1684f1bc1875d57498f124c59b:Project.swiftpm/Versao2.1/ListaLugaresView2.swift
             }
+            
         }
-        
     }
 }
-
 #Preview {
-    ListaLugaresView2()
+    ListaLugaresView2_1()
 }

@@ -54,5 +54,5 @@ struct ListaLugaresView2_2: View {
 
 
 #Preview {
-    ListaLugaresView2()
+    ListaLugaresView2_2()
 }
