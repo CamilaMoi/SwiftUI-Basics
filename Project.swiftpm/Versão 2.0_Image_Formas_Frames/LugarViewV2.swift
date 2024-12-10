@@ -1,23 +1,18 @@
 import SwiftUI
 
-struct LugarView2: View {
-    
-    @State private var isFavorited = false
-    @Binding var numberOfVisits: Int
-    var nome: String
+struct LugarViewV2: View {
     
     var body: some View{
         VStack{
             ScrollView{
                 
-                Color("primary") //.ignoresSafeArea()
-                
-                
+//                1º
                 Image("foto")
 //                    .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
-                Image(nome)
+//                2º
+                Image("Igarapé do 40")
                     .frame(maxWidth: 250, maxHeight: 250)
                     .clipShape(Circle())
                     .overlay {
@@ -32,16 +27,6 @@ struct LugarView2: View {
                             .foregroundStyle(Color("secondary"))
                         
                             .font(.largeTitle)
-                            
-                        Spacer()
-                        
-                        Button(action: {
-                            isFavorited.toggle()
-                        }) {
-                            Image(systemName: isFavorited ? "star.fill" : "star")
-                                .foregroundColor(isFavorited ? .yellow : .gray)
-                                .font(.largeTitle)
-                        }
                     }
                     
                     HStack {
@@ -65,23 +50,15 @@ struct LugarView2: View {
                     Text("  Apesar das dificuldades, o Igarapé do 40 carrega grande significado cultural e social para Manaus. Ele é um exemplo da relação íntima que os moradores da cidade têm com os rios e igarapés, que são parte integrante da identidade amazônica. Sua recuperação é uma meta importante para tornar Manaus uma cidade mais sustentável e resiliente.")
                         .font(.body)
                     
-                    Button {
-                    } label: {
-                        CustomButton(buttonText: "Visitei hoje")
-
-                    }
-
-                    
                 }.padding()
             }
             .ignoresSafeArea()
         }
-//        .ignoresSafeArea()
     }
 }
 
 
-//
-//#Preview {
-//    LugarView(nome: "Ponta Negra")
-//}
+
+#Preview {
+    LugarViewV2()
+}

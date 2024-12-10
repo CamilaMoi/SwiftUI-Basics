@@ -1,9 +1,8 @@
 import SwiftUI
 
-struct LugarView2: View {
+struct LugarViewV6: View {
     
     @State private var isFavorited = false
-    @Binding var numberOfVisits: Int
     var nome: String
     
     var body: some View{
@@ -67,7 +66,7 @@ struct LugarView2: View {
                     
                     Button {
                     } label: {
-                        CustomButton(buttonText: "Visitei hoje")
+                        CustomButtonV6(buttonText: "Visitei hoje")
 
                     }
 
@@ -81,7 +80,7 @@ struct LugarView2: View {
 }
 
 
-//
-//#Preview {
-//    LugarView(nome: "Ponta Negra")
-//}
+
+#Preview {
+    LugarViewV6(nome: "Ponta Negra")
+}

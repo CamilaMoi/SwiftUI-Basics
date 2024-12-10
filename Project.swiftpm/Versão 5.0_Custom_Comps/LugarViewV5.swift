@@ -1,23 +1,22 @@
 import SwiftUI
 
-struct LugarView2: View {
+struct LugarViewV5: View {
     
+//    1º
     @State private var isFavorited = false
-    @Binding var numberOfVisits: Int
-    var nome: String
     
     var body: some View{
         VStack{
+            
             ScrollView{
                 
-                Color("primary") //.ignoresSafeArea()
-                
+                Color("primary").ignoresSafeArea()
                 
                 Image("foto")
 //                    .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
-                Image(nome)
+                Image("Igarapé do 40")
                     .frame(maxWidth: 250, maxHeight: 250)
                     .clipShape(Circle())
                     .overlay {
@@ -30,11 +29,11 @@ struct LugarView2: View {
                     HStack {
                         Text("Igarapé do Quarenta")
                             .foregroundStyle(Color("secondary"))
-                        
                             .font(.largeTitle)
-                            
+                        
                         Spacer()
                         
+//                        2º
                         Button(action: {
                             isFavorited.toggle()
                         }) {
@@ -48,6 +47,7 @@ struct LugarView2: View {
                         Text("Ponto histórico de Manaus")
                         Spacer()
                         Text("Amazonas")
+                        
                     }
                     .foregroundStyle(.gray)
                     .font(.subheadline)
@@ -67,21 +67,19 @@ struct LugarView2: View {
                     
                     Button {
                     } label: {
-                        CustomButton(buttonText: "Visitei hoje")
+                        CustomButtonV5(buttonText: "Visitei hoje")
 
                     }
-
                     
                 }.padding()
             }
             .ignoresSafeArea()
         }
-//        .ignoresSafeArea()
     }
 }
 
 
-//
-//#Preview {
-//    LugarView(nome: "Ponta Negra")
-//}
+
+#Preview {
+    LugarViewV5()
+}

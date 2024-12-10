@@ -7,6 +7,7 @@ struct LugarViewV3: View {
             
             ScrollView{
                 
+//                1º
                 Color("primary").ignoresSafeArea()
                 
                 Image("foto")
@@ -61,5 +62,5 @@ struct LugarViewV3: View {
 
 
 #Preview {
-    LugarViewV2()
+    LugarViewV3()
 }

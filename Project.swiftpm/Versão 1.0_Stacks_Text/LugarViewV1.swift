@@ -1,35 +1,17 @@
 import SwiftUI
 
-struct LugarViewV3: View {
+struct LugarViewV1: View {
     
     var body: some View{
         VStack{
-            
             ScrollView{
-                
-                Color("primary").ignoresSafeArea()
-                
-                Image("foto")
-//                    .aspectRatio(contentMode: .fill)
-                    .frame(maxWidth: .infinity, maxHeight: 25)
-                
-                Image("Igarapé do 40")
-                    .frame(maxWidth: 250, maxHeight: 250)
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle().stroke(.white, lineWidth: 4)
-                    }
-//                    .shadow(radius: 200)
-                
                 VStack(alignment: .leading) {
                     
                     HStack {
                         Text("Igarapé do Quarenta")
                             .foregroundStyle(Color("secondary"))
-                        
                             .font(.largeTitle)
                     }
-                    
                     HStack {
                         Text("Ponto histórico de Manaus")
                         Spacer()
@@ -50,10 +32,9 @@ struct LugarViewV3: View {
                     
                     Text("  Apesar das dificuldades, o Igarapé do 40 carrega grande significado cultural e social para Manaus. Ele é um exemplo da relação íntima que os moradores da cidade têm com os rios e igarapés, que são parte integrante da identidade amazônica. Sua recuperação é uma meta importante para tornar Manaus uma cidade mais sustentável e resiliente.")
                         .font(.body)
-                    
+
                 }.padding()
             }
-            .ignoresSafeArea()
         }
     }
 }
@@ -61,5 +42,5 @@ struct LugarViewV3: View {
 
 
 #Preview {
-    LugarViewV2()
+    LugarViewV1()
 }
