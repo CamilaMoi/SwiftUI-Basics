@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListaLugaresView2_2: View {
+struct ListaLugaresView2_1: View {
     
     let lugares: [String] = [
         "Igarapé do 40",
@@ -25,7 +25,7 @@ struct ListaLugaresView2_2: View {
                 List {
                     ForEach(lugares, id: \.self){ local in
                         NavigationLink {
-                            LugarView2(numberOfVisits: $numberOfVisits, nome: local)
+                            LugarView2_1(numberOfVisits: $numberOfVisits, nome: local)
                         } label: {
                             HStack {
                                 Image(local)
@@ -54,5 +54,5 @@ struct ListaLugaresView2_2: View {
 
 
 #Preview {
-    ListaLugaresView2()
+    ListaLugaresView2_1()
 }
