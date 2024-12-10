@@ -1,19 +1,18 @@
 import SwiftUI
 
-struct LugarView: View {
+struct LugarView2_0: View {
     
     @State private var isFavorited = false
+    @Binding var numberOfVisits: Int
     var nome: String
     
     var body: some View{
         VStack{
             ScrollView{
                 
-                Color("primary") //.ignoresSafeArea()
-                
+                Color("primary").ignoresSafeArea()
                 
                 Image("foto")
-//                    .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
                 Image(nome)
@@ -22,17 +21,14 @@ struct LugarView: View {
                     .overlay {
                         Circle().stroke(.white, lineWidth: 4)
                     }
-//                    .shadow(radius: 200)
+                    .shadow(radius: 7)
                 
                 VStack(alignment: .leading) {
                     
                     HStack {
                         Text("Igarapé do Quarenta")
                             .foregroundStyle(Color("secondary"))
-                        
                             .font(.largeTitle)
-                            
-                        Spacer()
                         
                         Button(action: {
                             isFavorited.toggle()
@@ -58,19 +54,27 @@ struct LugarView: View {
                     }
                     
                     Text("  Esse igarapé reflete o desafio de conciliar desenvolvimento urbano com preservação ambiental. Projetos de revitalização e despoluição têm sido implementados nos últimos anos, buscando devolver ao Igarapé do 40 sua função ecológica e melhorar a qualidade de vida das populações ao redor. Essas iniciativas incluem a construção de sistemas de saneamento, dragagem, reflorestamento das margens e conscientização ambiental da comunidade.")
-//                        .lineSpacing(50.8)
                         .font(.body)
                     
                     Text("  Apesar das dificuldades, o Igarapé do 40 carrega grande significado cultural e social para Manaus. Ele é um exemplo da relação íntima que os moradores da cidade têm com os rios e igarapés, que são parte integrante da identidade amazônica. Sua recuperação é uma meta importante para tornar Manaus uma cidade mais sustentável e resiliente.")
                         .font(.body)
+                    
+                    Button {
+                        numberOfVisits += 1
+                    } label: {
+                        CustomButton(buttonText: "Visitei hoje")
+
+                    }
+
+                    
                 }.padding()
             }
-            .ignoresSafeArea()
         }
-//        .ignoresSafeArea()
     }
 }
 
-#Preview {
-    LugarView(nome: "Ponta Negra")
-}
+
+//
+//#Preview {
+//    LugarView(nome: "Ponta Negra")
+//}
