@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CustomButtonV6: View {
+struct CustomButton1_5: View {
     
     let buttonText: String
     

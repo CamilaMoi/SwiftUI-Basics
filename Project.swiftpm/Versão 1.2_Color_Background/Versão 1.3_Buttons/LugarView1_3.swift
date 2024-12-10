@@ -1,13 +1,15 @@
 import SwiftUI
 
-struct LugarViewV3: View {
+struct LugarView1_3: View {
+    
+//    1º
+    @State private var isFavorited = false
     
     var body: some View{
         VStack{
             
             ScrollView{
                 
-//                1º
                 Color("primary").ignoresSafeArea()
                 
                 Image("foto")
@@ -27,14 +29,25 @@ struct LugarViewV3: View {
                     HStack {
                         Text("Igarapé do Quarenta")
                             .foregroundStyle(Color("secondary"))
-                        
                             .font(.largeTitle)
+                        
+                        Spacer()
+                        
+//                        2º
+                        Button(action: {
+                            isFavorited.toggle()
+                        }) {
+                            Image(systemName: isFavorited ? "star.fill" : "star")
+                                .foregroundColor(isFavorited ? .yellow : .gray)
+                                .font(.largeTitle)
+                        }
                     }
                     
                     HStack {
                         Text("Ponto histórico de Manaus")
                         Spacer()
                         Text("Amazonas")
+                        
                     }
                     .foregroundStyle(.gray)
                     .font(.subheadline)
@@ -62,5 +75,5 @@ struct LugarViewV3: View {
 
 
 #Preview {
-    LugarViewV3()
+    LugarView1_4()
 }

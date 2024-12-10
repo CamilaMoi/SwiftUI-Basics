@@ -1,15 +1,13 @@
 import SwiftUI
 
-struct LugarViewV5: View {
-    
-//    1º
-    @State private var isFavorited = false
+struct LugarView1_2: View {
     
     var body: some View{
         VStack{
             
             ScrollView{
                 
+//                1º
                 Color("primary").ignoresSafeArea()
                 
                 Image("foto")
@@ -29,25 +27,14 @@ struct LugarViewV5: View {
                     HStack {
                         Text("Igarapé do Quarenta")
                             .foregroundStyle(Color("secondary"))
+                        
                             .font(.largeTitle)
-                        
-                        Spacer()
-                        
-//                        2º
-                        Button(action: {
-                            isFavorited.toggle()
-                        }) {
-                            Image(systemName: isFavorited ? "star.fill" : "star")
-                                .foregroundColor(isFavorited ? .yellow : .gray)
-                                .font(.largeTitle)
-                        }
                     }
                     
                     HStack {
                         Text("Ponto histórico de Manaus")
                         Spacer()
                         Text("Amazonas")
-                        
                     }
                     .foregroundStyle(.gray)
                     .font(.subheadline)
@@ -65,12 +52,6 @@ struct LugarViewV5: View {
                     Text("  Apesar das dificuldades, o Igarapé do 40 carrega grande significado cultural e social para Manaus. Ele é um exemplo da relação íntima que os moradores da cidade têm com os rios e igarapés, que são parte integrante da identidade amazônica. Sua recuperação é uma meta importante para tornar Manaus uma cidade mais sustentável e resiliente.")
                         .font(.body)
                     
-                    Button {
-                    } label: {
-                        CustomButtonV5(buttonText: "Visitei hoje")
-
-                    }
-                    
                 }.padding()
             }
             .ignoresSafeArea()
@@ -81,5 +62,5 @@ struct LugarViewV5: View {
 
 
 #Preview {
-    LugarViewV5()
+    LugarView1_3()
 }

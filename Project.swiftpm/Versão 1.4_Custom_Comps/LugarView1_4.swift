@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LugarViewV4: View {
+struct LugarView1_4: View {
     
 //    1º
     @State private var isFavorited = false
@@ -65,6 +65,12 @@ struct LugarViewV4: View {
                     Text("  Apesar das dificuldades, o Igarapé do 40 carrega grande significado cultural e social para Manaus. Ele é um exemplo da relação íntima que os moradores da cidade têm com os rios e igarapés, que são parte integrante da identidade amazônica. Sua recuperação é uma meta importante para tornar Manaus uma cidade mais sustentável e resiliente.")
                         .font(.body)
                     
+                    Button {
+                    } label: {
+                        CustomButton1_4(buttonText: "Visitei hoje")
+
+                    }
+                    
                 }.padding()
             }
             .ignoresSafeArea()
@@ -75,5 +81,5 @@ struct LugarViewV4: View {
 
 
 #Preview {
-    LugarViewV4()
+    LugarView1_4()
 }

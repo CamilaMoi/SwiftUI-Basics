@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListaLugaresView6: View {
+struct ListaLugaresView1_5: View {
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     
@@ -55,5 +55,5 @@ struct ListaLugaresView6: View {
 }
 
 #Preview {
-    ListaLugaresView6()
+    ListaLugaresView1_5()
 }
