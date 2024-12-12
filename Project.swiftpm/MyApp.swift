@@ -4,8 +4,7 @@ import SwiftUI
 struct MyApp: App {
     var body: some Scene {
         WindowGroup {
-//            LugarView2(nome: "Ponta Negra")
-            ListaLugaresView8()
+            LugarViewV0()
         }
     }
 }
