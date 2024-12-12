@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct LugarView2: View {
+//    fit nao distorce, fill sim
     
     var body: some View{
         VStack{
@@ -8,7 +9,7 @@ struct LugarView2: View {
                 
 //                1º
                 Image("foto")
-//                    .aspectRatio(contentMode: .fill)
+//                    .aspectRatio(16/9, contentMode: .fit)
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
 //                2º

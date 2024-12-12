@@ -1,0 +1,12 @@
+//
+//  File.swift
+//  SwiftUI-Basics
+//
+//  Created by Camila Moi on 12/12/24.
+//
+
+import Foundation
+
+O Igarapé do 40, localizado em Manaus, Amazonas, é um dos cursos d’água urbanos mais conhecidos da cidade. Ele atravessa áreas densamente povoadas, desempenhando um papel histórico e ambiental importante. Durante décadas, foi uma fonte essencial de água e transporte para comunidades locais, mas, com o crescimento urbano desordenado, acabou sendo alvo de poluição e ocupações irregulares.
+
+Esse igarapé reflete o desafio de conciliar desenvolvimento urbano com preservação ambiental. Projetos de revitalização e despoluição têm sido implementados nos últimos anos, buscando devolver ao Igarapé do 40 sua função ecológica e melhorar a qualidade de vida das populações ao redor. Essas iniciativas incluem a construção de sistemas de saneamento, dragagem, reflorestamento das margens e conscientização ambiental da comunidade.
