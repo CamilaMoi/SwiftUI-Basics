@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LugarView1_3: View {
+struct LugarView4: View {
     
 //    1º
     @State private var isFavorited = false
@@ -75,5 +75,5 @@ struct LugarView1_3: View {
 
 
 #Preview {
-    LugarView1_4()
+    LugarView4()
 }

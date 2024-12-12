@@ -1,17 +1,21 @@
 import SwiftUI
 
-struct LugarView1_1: View {
+struct LugarView5: View {
+    
+//    1º
+    @State private var isFavorited = false
     
     var body: some View{
         VStack{
+            
             ScrollView{
                 
-//                1º
+                Color("primary").ignoresSafeArea()
+                
                 Image("foto")
 //                    .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
-//                2º
                 Image("Igarapé do 40")
                     .frame(maxWidth: 250, maxHeight: 250)
                     .clipShape(Circle())
@@ -25,14 +29,25 @@ struct LugarView1_1: View {
                     HStack {
                         Text("Igarapé do Quarenta")
                             .foregroundStyle(Color("secondary"))
-                        
                             .font(.largeTitle)
+                        
+                        Spacer()
+                        
+//                        2º
+                        Button(action: {
+                            isFavorited.toggle()
+                        }) {
+                            Image(systemName: isFavorited ? "star.fill" : "star")
+                                .foregroundColor(isFavorited ? .yellow : .gray)
+                                .font(.largeTitle)
+                        }
                     }
                     
                     HStack {
                         Text("Ponto histórico de Manaus")
                         Spacer()
                         Text("Amazonas")
+                        
                     }
                     .foregroundStyle(.gray)
                     .font(.subheadline)
@@ -50,6 +65,12 @@ struct LugarView1_1: View {
                     Text("  Apesar das dificuldades, o Igarapé do 40 carrega grande significado cultural e social para Manaus. Ele é um exemplo da relação íntima que os moradores da cidade têm com os rios e igarapés, que são parte integrante da identidade amazônica. Sua recuperação é uma meta importante para tornar Manaus uma cidade mais sustentável e resiliente.")
                         .font(.body)
                     
+                    Button {
+                    } label: {
+                        CustomButton(buttonText: "Visitei hoje")
+
+                    }
+                    
                 }.padding()
             }
             .ignoresSafeArea()
@@ -60,5 +81,5 @@ struct LugarView1_1: View {
 
 
 #Preview {
-    LugarView1_1()
+    LugarView5()
 }

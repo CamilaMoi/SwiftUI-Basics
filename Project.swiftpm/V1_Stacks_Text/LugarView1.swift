@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct LugarView1_0: View {
+struct LugarView1: View {
     
     var body: some View{
         VStack{
@@ -42,5 +42,5 @@ struct LugarView1_0: View {
 
 
 #Preview {
-    LugarView1_0()
+    LugarView1()
 }

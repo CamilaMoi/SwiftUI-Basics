@@ -1,19 +1,17 @@
 import SwiftUI
 
-struct LugarView1_2: View {
+struct LugarView2: View {
     
     var body: some View{
         VStack{
-            
             ScrollView{
                 
 //                1º
-                Color("primary").ignoresSafeArea()
-                
                 Image("foto")
 //                    .aspectRatio(contentMode: .fill)
                     .frame(maxWidth: .infinity, maxHeight: 25)
                 
+//                2º
                 Image("Igarapé do 40")
                     .frame(maxWidth: 250, maxHeight: 250)
                     .clipShape(Circle())
@@ -62,5 +60,5 @@ struct LugarView1_2: View {
 
 
 #Preview {
-    LugarView1_3()
+    LugarView2()
 }
